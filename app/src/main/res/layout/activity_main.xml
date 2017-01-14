@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:padding="5dp"
+    android:layout_height="match_parent"
+
+    tools:context="pl.oskarpolak.bookshare.MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_weight="1.5"
+        android:background="@color/colorMenu"
+        android:layout_height="match_parent">
+
+        <Button
+            android:text="Czytelnik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buttonLibrary"
+            android:layout_alignLeft="@+id/buttonLibrary"
+            android:layout_alignStart="@+id/buttonLibrary"
+            android:layout_marginTop="34dp"
+            android:id="@+id/buttonUsers"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:text="Wyloguj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buttonUsers"
+            android:layout_alignLeft="@+id/buttonUsers"
+            android:layout_alignStart="@+id/buttonUsers"
+            android:layout_marginTop="39dp"
+            android:id="@+id/buttonLogout"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:text="Moje"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="61dp"
+            android:id="@+id/buttonMyBooks"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:text="Biblioteka"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:id="@+id/buttonLibrary"
+            android:layout_below="@+id/buttonMyBooks"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:paddingLeft="5dp"
+
+        android:id="@+id/frameFragment"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+
+</LinearLayout>

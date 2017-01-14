@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="pl.oskarpolak.bookshare.LoginActivity">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_above="@+id/buttonLogin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="77dp"
+        android:id="@+id/editTextLogin"
+        android:hint="Twój login" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:layout_above="@+id/buttonLogin"
+        android:layout_alignLeft="@+id/editTextLogin"
+        android:layout_alignStart="@+id/editTextLogin"
+        android:layout_marginBottom="23dp"
+        android:id="@+id/editTextPassword"
+        android:hint="Twoje hasło" />
+
+    <Button
+        android:text="Zaloguj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonLogin"
+        android:layout_alignBottom="@+id/checkBoxRemember"
+        android:layout_alignRight="@+id/editTextPassword"
+        android:layout_alignEnd="@+id/editTextPassword" />
+
+    <TextView
+        android:text="BookShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp"
+        android:id="@+id/textView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+    <CheckBox
+        android:text="Pamiętaj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBoxRemember"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:layout_marginTop="197dp"
+        android:checked="true"
+        android:layout_below="@+id/textView"
+        android:layout_alignLeft="@+id/editTextPassword"
+        android:layout_alignStart="@+id/editTextPassword" />
+</RelativeLayout>
