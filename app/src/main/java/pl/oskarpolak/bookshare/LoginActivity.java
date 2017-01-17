@@ -26,12 +26,14 @@ public class LoginActivity extends AppCompatActivity {
 
 
     private SharedPreferences preferences;
+    private SQLiteData data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
+        data = new SQLiteData(this);
 
         preferences = this.getSharedPreferences("loginData", MODE_PRIVATE);
         loadData();
@@ -52,11 +54,13 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
 
-        saveData();
+        if(data.checkPassword(login, password)) {
+            Intent i = new Intent(this, MainActivity.class);
+            startActivity(i);
+            saveData();
+        }
 
-        // login & password ok
-        Intent i = new Intent(this, MainActivity.class);
-        startActivity(i);
+
     }
 
     private void loadData() {
@@ -73,6 +77,12 @@ public class LoginActivity extends AppCompatActivity {
             editor.putBoolean("remember", true);
             editor.commit();
         }
+    }
+
+    @OnClick(R.id.buttonMakeRegister)
+    public void makeReigster(){
+        Intent i = new Intent(this, RegisterActivity.class);
+        startActivity(i);
     }
 
 
